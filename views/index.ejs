@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Plaindrome Checker</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Drome Checker</h1>
+  <h2>Is it a palindrome?</h2>
+
+
+  <h3>Possible Palindromes</h3>
+  <ul class="messages">
+  <% for(var i=0; i<drome.length; i++) {%>
+    <li class="message">
+      <span><%= drome[i].drome %></span>
+      <span><%= drome[i].thumbUp %></span>
+      <span><%= drome[i].op %></span>
+      <span><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
+      <span><i class="fa fa-thumbs-down" aria-hidden="true"></i></span>
+      <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+    </li>
+  <% } %>
+  </ul>
+
+  <h2>Check if it's a palindrome</h2>
+<h3 id="res"></h3>
+  <form action="/messages" method="POST">
+    <input type="text" placeholder="name" name="drome">
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
